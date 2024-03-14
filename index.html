@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Julie Portanguen</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <!-- Fonts -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Love+Light&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font awsome icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
-    <!-- CSS styles -->
+    <!-- Custom CSS style -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <!-- Navigation -->
+    <header>
       <div class="logo">
-        <a href="#">
-          <img
-            src="./assets/logonom.jpg"
-            alt="logo julie portanguen"
-            width="160"
-        /></a>
+        <img src="img/logonom.jpg" alt="logo" />
       </div>
-      <!-- <button class="nav-toggle" aria-label="toggle navigation">
+      <button class="nav-toggle" aria-label="toggle navigation">
         <span class="hamburger"></span>
-      </button> -->
+      </button>
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
@@ -46,26 +49,31 @@
       </nav>
     </header>
 
-    <!-- Introduction -->
-    <section class="intro" id="home">
-      <div class="intro_content">
-        <p class="section__description">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
-          perferendis quibusdam officia dolorum alias eaque consequatur
-          exercitationem tenetur in fugit accusantium error dolor accusamus
-          quos, impedit cupiditate rerum vel laudantium.
-        </p>
-        <a href="#" class="read_more_btn">Read more</a>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero_content">
+        <div class="hero_description">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Possimus iusto, aperiam magni ipsum
+            corporis neque, nihil molestias dolorem fugiat culpa nesciunt, nobis
+            similique ipsam exercitationem aliquam quae est delectus deleniti.
+          </p>
+          <a href="#" class="read_more_btn">Read more</a>
+        </div>
       </div>
       <div class="social-list__container">
         <ul class="social-list">
           <li class="social-list__item">
-            <a class="social-list__link" href="https://codepen.io">
+            <a class="social-list__link" href="https://facebook.com">
               <i class="fa-brands fa-facebook"></i>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link" href="http://dribbble.com">
+            <a class="social-list__link" href="http://instagram.com">
               <i class="fa-brands fa-instagram"></i>
             </a>
           </li>
@@ -75,7 +83,7 @@
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link" href="https://github.com">
+            <a class="social-list__link" href="https://whatsapp.com">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
           </li>
@@ -86,34 +94,38 @@
         loop
         playsinline
         muted
-        src="/assets/intro.webm"
+        src="/video/intro.mp4"
+        type="video/mp4"
         class="video-bg"
       ></video>
     </section>
 
-    <!-- Biography -->
-    <section class="biography" id="biography">
-      <img
-        src="/assets/portret.png"
-        alt="image of Julie"
-        class="about-me__img"
-      />
-      <div class="biograpfy_content">
-        <div class="background">
-          <p class="biography_description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
-            perferendis quibusdam officia dolorum alias eaque consequatur
-            exercitationem tenetur in fugit accusantium error dolor accusamus
-            quos, impedit cupiditate rerum vel laudantium.
+    <!-- Introduction -->
+
+    <section class="intro" id="about">
+      <h1 class="section__title section__title--intro">About me</h1>
+      <div class="intro_content">
+        <div class="section__content section__content--intro">
+          <p class="intro_description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            quod nostrum voluptatibus id totam deserunt harum quia, tempora,
+            incidunt culpa at asperiores perspiciatis veniam, quam dolor
+            corporis maiores! Eius, pariatur.
           </p>
           <a href="#" class="read_more_btn">Read more</a>
         </div>
+
+        <img
+          src="img/portret.jpg"
+          alt="a picture of Jane Smith smiling"
+          class="intro__img"
+        />
       </div>
     </section>
 
-    <!-- Dance -->
+    <!-- Dance section -->
     <section class="dance" id="dance">
-      <h1 class="section_title">Dance</h1>
+      <h1 class="section__title section__title--dance">Dance</h1>
       <div class="dance_content">
         <p class="dance_description">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
@@ -128,75 +140,65 @@
         loop
         playsinline
         muted
-        src="/assets/dance.mp4"
+        src="/video/dance.mp4"
         type="video/mp4"
         class="video-bg"
       ></video>
     </section>
+
     <!-- Section break -->
     <section class="section_break"></section>
-    <!-- Yoga -->
+
+    <!-- Yoga section -->
     <section class="yoga" id="yoga">
-      <h1 class="section_title">Yoga</h1>
+      <h1 class="section__title section__title--yoga">Yoga</h1>
       <div class="yoga_content">
         <p class="yoga_description">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
           perferendis quibusdam officia dolorum alias eaque consequatur
           exercitationem tenetur in fugit accusantium error dolor accusamus
-          quos, impedit cupiditate rerum vel laudantium. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quisquam iure qui, natus minima,
-          cum eius sapiente est delectus sint ducimus aspernatur maiores modi
-          magnam quaerat! Quis dolores necessitatibus quas dignissimos.
+          quos, impedit cupiditate rerum vel laudantium.
         </p>
         <a href="#" class="read_more_btn">Read more</a>
       </div>
-
       <video
         autoplay
         loop
         playsinline
         muted
-        src="/assets/yoga.mp4"
+        src="/video/yoga.mp4"
         type="video/mp4"
         class="video-bg"
       ></video>
     </section>
 
     <!-- Footer -->
-    <footer>
-      <div class="top_header">
-        <section>
-          <span><i class="fa fa-map-marker"></i></span>
-          <span>Street, full address, state/province, France, pincode</span>
-        </section>
-        <section>
-          <span><i class="fa fa-phone"></i></span>
-          <span>(00) 0000 0000</span>
-        </section>
-        <section>
-          <span><i class="fa fa-envelope"></i></span>
-          <span>info@websitename.com</span>
-        </section>
-      </div>
-      <div class="bottom_content">
-        <section>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-        </section>
-        <section>
-          <a href="#">Home</a>
-          <a href="#">Biography</a>
-          <a href="#">Dance</a>
-          <a href="#">Yoga</a>
-          <a href="#">Other activities</a>
-          <a href="#">Contact Us</a>
-        </section>
-      </div>
-      <div class="copyright">
-        Copyright © 2024 ACN Dev - All rights reserved
-      </div>
+    <footer class="footer">
+      <a href="mailto:hello@julie.com" class="footer__link">hello@julie.com</a>
+      <ul class="footer_social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://facebook.com">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="http://instagram.com">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://whatsapp.com">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+      </ul>
     </footer>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
