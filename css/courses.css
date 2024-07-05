@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Local fonts */
+@font-face {
+  font-family: "Lovely Pretty";
+  src: url("/fonts/Lovely-Pretty.ttf");
+}
+@font-face {
+  font-family: "Shree Devenagari 714";
+  src: url("/fonts/Shree-Devanagari-714.ttf");
+}
+
+/* Custom Properties */
+
+:root {
+  --ff-primary: "Shree Devenagari 714", sans-serif;
+  --ff-secondary: "Lovely Pretty", cursive;
+
+  --fw-reg: 400;
+  --fw-bold: 800;
+
+  --clr-light: #e9dbd3;
+  --clr-normal: #c99c87;
+  --clr-dark: #3a3a3a;
+  --clr-accent: #96c1e8;
+  --clr-white: #f3f3f3;
+  --fs-h1: 4rem;
+  --fs-btn: 2rem;
+  --fs-body: 1rem;
+  --fs-list: 2rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+
+  --typewriterSpeed: 3s;
+  --typewriterCharacters: 24;
+}
+
+@media (min-width: 60em) {
+  :root {
+    --fs-h1: 8rem;
+    --fs-btn: 3rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+body {
+  background-color: antiquewhite;
+  text-align: center;
+}
+.title {
+  text-align: center;
+}
+.yoga_type:nth-child(even) {
+  background-color: #fdf6b5;
+}
+.register_btn,
+.connect_btn {
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  border-radius: 10px;
+  background: rgb(252, 186, 186);
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: var(--fs-body);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+}
+
+.register_btn {
+  color: rgb(185, 0, 185);
+}
+.register_btn:hover {
+  transform: scale(1.05);
+  color: rgb(179, 14, 179);
+}
+
+.connect_btn {
+  color: rgb(0, 140, 200);
+}
+.connect_btn:hover {
+  transform: scale(1.02);
+  /* color: rgb(34, 174, 235); */
+}
+.col {
+  background-color: #96c1e8;
+  padding: 0.5em;
+}
+
+@media (min-width: 60em) {
+  .row {
+    display: flex;
+    gap: 2rem;
+  }
+  .col {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
